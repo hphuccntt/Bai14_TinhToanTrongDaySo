@@ -24,26 +24,49 @@ namespace Bai14_TinhToanTrongDaySo
             int chan = 0, le = 0;
             txtChan.Text = " ";
             txtLe.Text = " ";
-           
-            for(int i = nho; i <= lon; i++)
+
+            
+            while (nho <= lon)
+                
             {
-                if ( i % 2 == 0 )
+                if (nho % 2 == 0)
                 {
-                   
-                    chan += i;
-                   
+                    chan += nho;
                 }
                 else
                 {
+                    le += lon;
                    
-                  le += i;
                 }
+                nho++;
+
                 txtChan.Text = chan.ToString();
                 txtLe.Text = le.ToString();
-
                 txtTong.Text = (chan + le).ToString();
-               
             }
+
+
+            /*
+             for(int i = nho; i <= lon; i++)
+             {
+                 if ( i % 2 == 0 )
+                 {
+
+                     chan += i;
+
+                 }
+                 else
+                 {
+
+                   le += i;
+                 }
+                 txtChan.Text = chan.ToString();
+                 txtLe.Text = le.ToString();
+                 txtTong.Text = (chan + le).ToString();
+            */
+
+
+        
         }
     }
 }
